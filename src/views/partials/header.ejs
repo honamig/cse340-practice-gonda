@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title><%= title %></title>
     <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/css/catalog.css">
 
     <% if (NODE_ENV.includes('dev')) { %>
     <script>
@@ -23,13 +24,17 @@
     </script>
 <% } %>
 </head>
-<body>
+<body class="<%= bodyClass %>">
     <header>
+        <%- greeting %>
+
         <nav>
             <ul>
                 <li><a href="/">Home</a></li>
                 <li><a href="/about">About</a></li>
-                <li><a href="/products">Products</a></li>
+                <li><a href="/catalog">Course Catalog</a></li>
+                <li><a href="/faculty">Faculty Directory</a></li>
+                <li><a href="/demo">Middleware Demo</a></li>
             </ul>
         </nav>
     </header>
